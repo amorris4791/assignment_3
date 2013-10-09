@@ -12,7 +12,11 @@ class MoviesController < ApplicationController
     
     @movies = Movie.find(:all, :order => @sort_titles) 
     @movies = Movie.find(:all, :order => @sort_release_date)
-
+   #ordering = {:order => :title}, 'hilite'
+   #@movies = Movie.find params[:order]  
+   #@movies = Movie.all
+   #@movies = Movie.where('title = ?', params[:order]) 
+    #@movies = Movie.find(:all, :conditions=>["title = ?", {"order"=>"title"}]) 
   end
 
   def new
